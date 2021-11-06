@@ -29,3 +29,32 @@ function exampleUrls(elements) {
   return elements.map(element => "https://example.com/" + urlify(element))
 }
 console.log(exampleUrls(states));
+
+//singles: imperative version
+function imperativeSingles(elements) {
+  let singles = []
+  elements.forEach(function(element) {
+    if (element.split(/\s+/).length === 1) {
+      singles.push(element)
+    }
+  });
+  return singles;
+}
+console.log(imperativeSingles(states));
+
+//singles: functional version
+function functionalSingles(elements) {
+  return elements.filter(element => element.split(/\s+/).length === 1)
+}
+console.log(functionalSingles(states));
+
+//6.2.1
+function findDakota(elements) {
+  return elements.filter(element => element.toLowerCase().includes("dakota"))
+}
+console.log(findDakota(states));
+
+function findDakotaRegex(states) {
+  return states.filter(state => state.split(/\s+/).length === 2)
+}
+console.log(findDakotaRegex(states));
