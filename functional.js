@@ -8,7 +8,6 @@ function urlify(string) {
 }
 
 //urls: Imperative version
-
 function imperativeUrls(elements) {
   let urls= [];
   elements.forEach(function(element) {
@@ -24,3 +23,9 @@ function functionalUrls(elements) {
   return elements.map(element => urlify(element));
 }
 console.log(functionalUrls(states));
+
+//6.1.1
+function exampleUrls(elements) {
+  return elements.map(element => "https://example.com/" + urlify(element))
+}
+console.log(exampleUrls(states));
