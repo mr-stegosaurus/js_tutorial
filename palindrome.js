@@ -15,3 +15,5 @@ function emailParts(email) {
   let processedEmail = email.toLowerCase();
   return processedEmail.split("@")
 }
+
+//TEST CODE FOR GIT PUSH CONFIG
