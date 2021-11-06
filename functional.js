@@ -91,7 +91,7 @@ console.log(imperativeLengths(states));
 //lengths: functional solution
 function functionalLengths(elements) {
   return elements.reduce((lengths, element) => {lengths[element] = element.length;
-  return lengths;
-  }, {});
+                          return lengths;
+                          }, {});
 }
 console.log(functionalLengths(states));
