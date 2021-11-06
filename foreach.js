@@ -1,5 +1,6 @@
+//Chapter 5 Exercises
 let a = ["ant", "bat", "cat", 42];
-a.forEach(function(element) {
+a.forEach(let new_array = (element) => {
   console.log(element);
 })
 
