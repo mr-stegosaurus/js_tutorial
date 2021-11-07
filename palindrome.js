@@ -1,20 +1,24 @@
 
-// Reverses a string
-function reverse(string) {
-  return Array.from(string).reverse().join("");
+//Adds 'reverse' to all strings.
+String.prototype.reverse = function reverse() {
+  return Array.from(this).reverse().join("");
 }
 
-// Returns true for a plaindrom, false otherwise.
-function palindrome(string) {
-  let processedContent = string.toLowerCase();
-  return processedContent === reverse(processedContent);
-}
+// Defines a Phrase object.
+function Phrase(content) {
+  this.content = content;
 
-// Return an array of the username and domain for a standard email
-function emailParts(email) {
-  let processedEmail = email.toLowerCase();
-  return processedEmail.split("@")
-}
+  this.processor = function(string) {
+    return this.string = string.toLowerCase()
+  }
 
-//TEST CODE FOR GIT PUSH CONFIG
-//MORE TEST CODE
+  //Returns content processed for palidnrome testing.
+  this.processedContent = function processedContent() {
+    return this.processor(this.content);
+  }
+
+  // Returns true for a palindrome, false otherwise.
+  this.palindrome = function palindrome() {
+    return this.processedContent() === this.processedContent().reverse();
+  }
+}
