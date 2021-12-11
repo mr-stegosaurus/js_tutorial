@@ -1,12 +1,13 @@
 let Phrase = require("mrstego-palindrome")
 
-function palindromeTester() {
-  let string = prompt("Please enter a string for palindrome testing:")
-  let phrase = new Phrase(string);
+function palindromeTester(event) {
+  event.preventDefault();
+
+  let phrase = new Phrase(event.target.phrase.value);
   let palindromeResult = document.querySelector("#palindromeResult");
 
   if (phrase.palindrome()) {
-    palindromeResult.innerHTML = `"<strong>${phrase.content}</strong>" is a palindrome!`;
+    palindromeResult.innerHTML = `"${phrase.content}" is a palindrome!`;
   } else {
     palindromeResult.innerHTML = `"${phrase.content}" is not a palindrome.`;
   }
@@ -14,7 +15,7 @@ function palindromeTester() {
 
 document.addEventListener("DOMContentLoaded", function() {
   let button = document.querySelector("#palindromeTester");
-  button.addEventListener("click", function() {
-    palindromeTester();
+  button.addEventListener("submit", function() {
+    palindromeTester(event);
   });
 });
