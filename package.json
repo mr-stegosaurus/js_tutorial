@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "fs": "^0.0.1-security",
+    "jsdom": "^19.0.0",
     "mrstego-palindrome": "^0.2.0",
     "request": "^2.88.2",
     "urllib": "^2.38.0"
